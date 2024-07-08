@@ -113,22 +113,14 @@ class TomTom(GisInterface):
         url = 'https://api.tomtom.com/routing/1/calculateRoute/' + get_location_as_string(
             origin) + ':' + get_location_as_string(destination) + '/json'
         options = {
+            'instructionsType': 'coded',
+            'instructionPhonetics': 'IPA',
+            'guidanceVersion': 1,
+            'language': 'en-US',
             'routeRepresentation': 'polyline',
             'key': self.api_key,
         }
-        instruction_specific_options = {
-            'instructionsType': 'coded',
-            'sectionType': 'lanes',
-            'instructionPhonetics': 'IPA',
-            'guidanceVersion': 2,
-            'language': 'en-US',
-        }
-        options.update(instruction_specific_options)
-        headers = {
-            'TomTom-Api-Version': '1',
-            'TomTom-User-Agent': "vanguard-route-visualization",
-        }
-        r = requests.get(url, params=options, headers=headers)
+        r = requests.get(url, params=options)
         if r.status_code != 200:
             print("Route calculation using {} failed with error code {} and error {}".format(self.__class__.__name__,
                                                                                              r.status_code, r.text))
