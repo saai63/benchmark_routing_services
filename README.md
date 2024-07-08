@@ -14,10 +14,10 @@ When tested on a route from Mumbai to Bangalore, I see the following results.
 +------------------+-----------------+--------------------+
 | Service Provider |     Service     | Time taken (in ms) |
 +------------------+-----------------+--------------------+
-|       Ola        | Calculate route | 806.1682500000001  |
-|      Mapbox      | Calculate route | 199.58766599999998 |
-|      TomTom      | Calculate route |    1445.283042     |
-|       Here       | Calculate route |     490.841208     |
+|       Ola        | Calculate route |      600.4735      |
+|      Mapbox      | Calculate route | 203.12287500000002 |
+|      TomTom      | Calculate route |     602.67725      |
+|       Here       | Calculate route | 412.3824999999999  |
 +------------------+-----------------+--------------------+
 ```
 ## Disclaimer
