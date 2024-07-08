@@ -16,4 +16,5 @@ prepare_python_env() {
 }
 
 prepare_python_env
+python benchmark_services.py
 deactivate
