@@ -20,6 +20,6 @@ When tested on a route from Mumbai to Bangalore, I see the following results.
 |       Here       | Calculate route |     490.841208     |
 +------------------+-----------------+--------------------+
 ```
-Please note: 
+## Disclaimer
 * I have used mostly the default request parameters.
 * I cannot be certain if the parameters passed to each of the services are equivalent. The responses for each services need to be checked thoroughly and request parameters should be fine tuned to have a better comparison. 
